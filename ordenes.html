@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiberPC || Ordenes de compra</title>
+  <meta name="description" content="CiberPC - Tu tienda en línea para componentes de computadoras. Encuentra una amplia selección de procesadores, tarjetas gráficas, memoria RAM y más. Ofrecemos productos de calidad para potenciar tu experiencia informática.">
+  <meta name="keywords" content="CiberPC, componentes de computadoras, procesadores, tarjetas gráficas, memoria RAM, hardware, tienda en línea">
+  <meta name="author" content="Alferez Gomez Luis Alberto">
+  <meta name="publisher" content="CiberPC - Tu Tienda de Componentes de Computadoras">
+  <link rel="canonical" href="" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleordenes.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="estilos/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-4LTLCWXEBE"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4LTLCWXEBE');
+</script>
+	
+</head>
+<body>
+  <section id="header">
+    
+    <a href="index.html" title="Landing-Page"><img src="" class="logo" alt=" logo" title="Logo"></a>
+
+    <div class="menu-container">
+      <div id="burger-menu" class="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <ul id="navbar">
+        <li><a href="index.html" title="Landing-Page">Inicio</a></li>
+        <li><a href="Catalogo.html" title="Catalogo de Productos">Catalogo</a></li>
+        <li><a href="about.html" title="Sobre Nosotros">Sobre Nosotros</a></li>
+        <li><a href="https://www.facebook.com/people/Essentia/61552656974932/" title="Contactanos">Contactanos</a></li>
+        <li><a href="wish.html" title="Lista de deseos"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+        <li><a class="active" href="sesion.html" title="Iniciar sesion"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+
+	<form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="business" value="T72T79GB93S3Q">
+        <input type="hidden" name="display" value="1">
+        <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        </form>
+      </ul>
+    </div>
+  </section>
+  <div id="ordenesDeCompra"></div>
+
+<footer class="section-p1">
+  <div class="col">
+    <img class="logo" src="" alt="logo" title="logo de la empresa">
+    <h4>Contact</h4>
+    <p><strong>Direccion:</strong>Av. Adolfo López Mateos Ote. 1801, Bona Gens, 20256 Aguascalientes, Ags.</p>
+    <p><strong>Telefono:</strong>449 960 9129</p>
+    <p><strong>Horario de Atencion:</strong>9:00 - 20:00,Lunes - Domingos</p>
+    <a href="https://www.facebook.com/people/Essentia/61552656974932/"<i class="fab fa-facebook" title="Pagina de Facebook"></i></a>	
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const ordenesDeCompra = {
+      "ordenesDeCompra": [
+        {
+          "fechaCompra": "6 de Octubre 2023",
+          "producto": "",
+          "estado": "Entregado",
+          "cantidad": 1,
+          "fechaEntrega": "16 de Octubre del 2023",
+          "direccionEntrega": "Segunda cerrada #110, Residencial El parque, C.P. 20277, Aguascalientes, Ags.",
+        },
+        {
+          "fechaCompra": "8 de Octubre 2023",
+          "producto": "",
+          "estado": "Cancelado",
+          "cantidad": 15,
+          "fechaEntrega": " ",
+          "direccionEntrega": "Segunda cerrada #110, Residencial El parque, C.P. 20277, Aguascalientes, Ags."
+        },{
+          "fechaCompra": "6 de Octubre 2023",
+          "producto": "",
+          "estado": "Entregado",
+          "cantidad": 1,
+          "fechaEntrega": "02 de Octubre del 2023",
+          "direccionEntrega": "Segunda cerrada #110, Residencial El parque, C.P. 20277, Aguascalientes, Ags."
+        }
+        
+      ]
+    };
+
+    function mostrarOrdenesDeCompra() {
+      const contenedor = document.getElementById('ordenesDeCompra');
+
+      ordenesDeCompra.ordenesDeCompra.forEach((orden) => {
+        const ordenDiv = document.createElement('div');
+        ordenDiv.className = 'container-lg styled-container';
+
+        const innerContainer = document.createElement('div');
+        innerContainer.className = 'container text-center pt-5 inner-container';
+
+        // Crear elementos HTML para cada propiedad de la orden y añadirlos a innerContainer
+        const fechaCompraElement = document.createElement('p');
+        fechaCompraElement.className = 'h3 text-left text-dark pt-3';
+        fechaCompraElement.textContent = `Compra realizada: ${orden.fechaCompra}`;
+        innerContainer.appendChild(fechaCompraElement);
+
+        const estadoCompraElement = document.createElement('p');
+        estadoCompraElement.className = 'h3 text-left text-dark pt-3';
+        estadoCompraElement.textContent = `Estado de compra: ${orden.estado}`;
+        innerContainer.appendChild(estadoCompraElement);
+
+        const cantidadCompraElement = document.createElement('p');
+        cantidadCompraElement.className = 'h3 text-left text-dark pt-3';
+        cantidadCompraElement.textContent = `cantidad de compra: ${orden.cantidad}`;
+        innerContainer.appendChild(cantidadCompraElement);
+
+
+        const fechaEntregaElement = document.createElement('p');
+        fechaEntregaElement.className = 'h5 text-left text-primary pt-4';
+        fechaEntregaElement.textContent = orden.fechaEntrega;
+        innerContainer.appendChild(fechaEntregaElement);
+
+        // Repite este proceso para cada propiedad que quieras mostrar
+
+        // Añadir innerContainer al ordenDiv
+        ordenDiv.appendChild(innerContainer);
+
+        // Añadir ordenDiv al contenedor principal
+        contenedor.appendChild(ordenDiv);
+      });
+    }
+
+    // Llamar a la función para mostrar las órdenes de compra cuando se cargue la página
+    mostrarOrdenesDeCompra();
+
+    const burgerMenu = document.getElementById('burger-menu');
+    const navbar = document.getElementById('navbar');
+
+    burgerMenu.addEventListener('click', function() {
+      navbar.classList.toggle('show');
+    });
+  });
+</script>
+</body>
+</html>

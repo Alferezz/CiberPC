@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiberPC || Catalogo</title>
+    <meta name="description" content="CiberPC - Tu tienda en línea para componentes de computadoras. Encuentra una amplia selección de procesadores, tarjetas gráficas, memoria RAM y más. Ofrecemos productos de calidad para potenciar tu experiencia informática.">
+    <meta name="keywords" content="CiberPC, componentes de computadoras, procesadores, tarjetas gráficas, memoria RAM, hardware, tienda en línea">
+    <meta name="author" content="Alferez Gomez Luis Alberto">
+    <meta name="publisher" content="CiberPC - Tu Tienda de Componentes de Computadoras">
+    <link rel="canonical" href="" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecatalogoproductos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <section id="header">
+    
+    <a href="index.html" title="Landing-Page"><img src="" class="logo" alt=" logo" title="Logo"></a>
+
+    <div class="menu-container">
+      <div id="burger-menu" class="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <ul id="navbar">
+         <li><a href="index.html" title="Landing-Page">Inicio</a></li>
+        <li><a class="active" href="Catalogo.html" title="Catalogo de Productos">Catalogo</a></li>
+        <li><a href="about.html" title="Sobre Nosotros">Sobre Nosotros</a></li>
+        <li><a href="" title="Contactanos">Contactanos</a></li>
+        <li><a href="wish.html" title="Lista de deseos"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+        <li><a href="sesion.html" title="Iniciar sesion"><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+
+        <form target="paypal" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" >
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="business" value="T72T79GB93S3Q">
+        <input type="hidden" name="display" value="1">
+        <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_viewcart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        </form>  
+      </ul>
+    </div>
+  </section>
+      
+    <div class="productos">
+        <div>
+            <select id="ordenar" onchange="ordenarProductos()">
+                <option value="ninguno">Ordenar por:</option>
+                <option value="precioAlto">Precio de mayor a menor</option>
+                <option value="precioBajo">Precio de menor a mayor</option>
+                <option value="nombreAsc">Nombre ascendente</option>
+                <option value="nombreDesc">Nombre descendente</option>
+            </select>
+
+            <input type="text" id="filtro" placeholder="Buscar por nombre o categoría">
+
+            <button id="buscar">Buscar</button>
+        </div>
+        
+        <div class="row" id="res"></div>
+    </div>
+
+    <script src="catalogo.js"></script>
+    <!-- Asegúrate de incluir tu script JavaScript al final del cuerpo del documento -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const burgerMenu = document.getElementById('burger-menu');
+        const navbar = document.getElementById('navbar');
+    
+        burgerMenu.addEventListener('click', function() {
+          navbar.classList.toggle('show');
+        });
+      });
+    </script>
+
+  </body>
+</html>

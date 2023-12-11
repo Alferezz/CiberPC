@@ -1,0 +1,72 @@
+/* Reset de estilos */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
+
+.producto {
+    margin: 10px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.card img {
+    height:150px;
+    width: auto;
+    position: relative;
+      margin: auto;
+}
+
+.producto h3 {
+    color: #007bff;
+}
+
+.producto h5,
+.producto h4 {
+    color: #343a40;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+    margin-top: 10px;
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+#res {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
