@@ -46,12 +46,12 @@ h1 {
 h2 {
   font-size: 46px;
   line-height: 54px;
-  color: #222;
+  color: #00d9ff;
 }
 
 h4 {
   font-size: 20px;
-  color: #222;
+  color: #ffffff;
 }
 
 h6 {
@@ -61,7 +61,7 @@ h6 {
 
 p {
   font-size: 16px;
-  color: #465b52;
+  color: #000000;
   margin: 15px 0 20px 0;
 }
 
@@ -140,7 +140,7 @@ body {
 
 /*IMAGEN 1 DE INDEX*/
 #hero{
-  background-image: url("");
+  background-image: url("img/fondo.png");
   height: 90vh;
   width: 100%;
   background-size: cover;
@@ -154,17 +154,17 @@ body {
 
 #hero h4{
   padding-bottom: 15%;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   
 }
 
 #hero h1{
-  color:  #7DA10C;
+  color:  #00d9ff;
 }
 
 #hero button{
   background-color: transparent;
-  color: #7DA10C;
+  color: #00d9ff;
   border: 0;
   padding: 14px 80px 14px 65px ;
   background-repeat: no-repeat;
